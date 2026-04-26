@@ -34,7 +34,6 @@ body {
 @keyframes bubble-appear {
   from {
     opacity: 0;
-    /* 减小位移距离，位移过大会显得慢 */
     transform: translateY(-4px); 
   }
   to {
