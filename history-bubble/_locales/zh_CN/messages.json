@@ -1,0 +1,7 @@
+{
+  "appName": { "message": "历史记录" },
+  "appDesc": { "message": "快速查看和管理最近历史记录。" },
+  "clearData": { "message": "清除浏览数据" },
+  "fullHistory": { "message": "完整历史记录" },
+  "noHistory": { "message": "无历史记录" }
+}

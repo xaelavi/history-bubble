@@ -1,0 +1,212 @@
+:root {
+  --bg-hover: #f1f3f4; 
+  --bg-active: #e1e3e1;  
+  --text-primary: #202124;
+  --text-secondary: #5f6368;
+  --footer-text: #474747;
+  --border-color: #dadce0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Roboto, -apple-system, sans-serif;
+  font-size: 13px;
+  color: var(--text-primary);
+  width: 320px; 
+  background: #fff;
+  overflow: hidden; 
+}
+
+.bubble-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 520px;
+  animation: bubble-appear 0.1s cubic-bezier(0, 0, 0.2, 1);
+  will-change: transform, opacity;
+  transform: translateZ(0); 
+}
+
+@keyframes bubble-appear {
+  from {
+    opacity: 0;
+    /* 减小位移距离，位移过大会显得慢 */
+    transform: translateY(-4px); 
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 2. Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+  height: 42px;
+  flex-shrink: 0;
+}
+
+.header h1 {
+  font-size: 14px;
+  margin: 0;
+  font-weight: 500;
+  user-select: none;
+}
+
+.list-area {
+  flex: 1;
+  overflow-y: overlay; 
+  overflow-x: hidden;
+  min-height: 100px;
+  padding: 0 !important; 
+}
+
+.list-area::-webkit-scrollbar {
+  width: 3px; 
+}
+
+.list-area::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.list-area::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+.list-area:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  padding: 4px 12px 4px 12px; 
+  height: 46px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.1s ease;
+  overflow: hidden;
+}
+
+.history-item:hover {
+  background-color: var(--bg-hover);
+}
+
+.favicon {
+  width: 16px;
+  height: 16px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.content-wrapper {
+  flex: 1;
+  min-width: 0; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-size: 13px;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.time {
+  font-size: 11px;
+  line-height: 1.2;
+  color: var(--text-secondary);
+  margin-top: 1px;
+}
+
+.icon-btn-highlight {
+  border: none;
+  background: transparent;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+}
+
+.icon-btn-highlight:hover {
+  background-color: var(--bg-active) !important;
+}
+
+.icon-btn-highlight img {
+  width: 16px;
+  height: 16px;
+}
+
+.header .icon-btn-highlight {
+  width: 28px;
+  height: 28px;
+}
+
+.delete-btn {
+  display: none;
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+}
+
+.history-item:hover .delete-btn {
+  display: flex;
+}
+
+.footer {
+  padding: 0 12px;
+  height: 40px;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s ease;
+  width: 100%;
+}
+
+.footer.border-top {
+  border-top: 1px solid var(--border-color);
+}
+
+.footer:hover {
+  background-color: var(--bg-hover);
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#footer-text {
+  color: var(--footer-text);
+  font-weight: 500;
+  user-select: none;
+}
+
+.footer-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.empty-state {
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--text-secondary);
+}

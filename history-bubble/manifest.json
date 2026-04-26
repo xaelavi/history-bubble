@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_appName__",
+  "version": "1.0",
+  "default_locale": "en",
+  "description": "__MSG_appDesc__",
+  "permissions": [
+    "history",
+    "favicon",
+    "tabs"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "__MSG_appName__"
+  },
+  "icons": {
+    "128": "icons/history.png"
+  }
+}

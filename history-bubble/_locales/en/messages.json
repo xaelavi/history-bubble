@@ -1,0 +1,8 @@
+{
+  "extName": { "message": "Recent History" },
+  "extDesc": { "message": "Quickly access your recent browsing history." },
+  "headerTitle": { "message": "Recent History" },
+  "fullHistory": { "message": "Full History" },
+  "clearData": { "message": "Clear Browsing Data" },
+  "noTitle": { "message": "No Title" }
+}
